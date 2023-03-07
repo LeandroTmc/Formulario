@@ -63,6 +63,9 @@ function MostrarMensajeDeError(tipoDeInput, input){
     let mensaje =""
     tipoDeErrores.ForEach( error => {
         if(input.validity[error]){
+            console.log(tipoDeInput, error);
+            console.log(input.validity[error]);
+            console.log(mensajeDeError[tipoDeInput][error]);
             mensaje = mensajeDeError[tipoDeInput][error];
         }
     });
